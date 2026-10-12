@@ -6,7 +6,7 @@ import java.util.Scanner;
 //on the contents/letters in their name
 public class Pet{
 
- public static void Pet(String[] args) {
+ public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
 
 
@@ -23,9 +23,27 @@ String userColor = input.nextLine().toLowerCase();
         return; //stop program
 }
 
-
-
+String userName = input.nextLine().toLowerCase();
+    if("abcdefghijklmnopqrstuvwxyz".indexOf(userName.substring(0, 1))> 0)
+{
+    System.out.println("nice name, " + userName + ", now type your favorite season(summer, winter, fall, spring).");
+}
+    else 
+{
+        System.out.println("please type your actual name.");
+        return; //stop program
+}
+String userSeason = input.nextLine().toLowerCase();
+    if (userSeason.equals("summer") || userSeason.equals("winter") || userSeason.equals("fall") || userSeason.equals("spring"))
+ {
+    System.out.println("awesome season, " + userSeason + ".");
  }
+    else 
+    {
+        System.out.println("please type a valid season, (summer, winter, fall, or spring).");
+        return; //exit program
+    }
+    }
 }           
 
 
