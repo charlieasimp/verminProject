@@ -20,13 +20,17 @@ String userColor = input.nextLine().toLowerCase();
     else
 {
         System.out.println("please type a valid color. (red, blue, or green).");
-        return; //stop program
+        userColor = input.nextLine().toLowerCase();
+        if (userColor.equals("blue") || userColor.equals("green") || userColor.equals("red"));
+{
+    System.out.println("cool color, " + userColor + ", now type your name.");
 }
+    }
 
 String userName = input.nextLine().toLowerCase();
     if("abcdefghijklmnopqrstuvwxyz".indexOf(userName.substring(0, 1))> 0)
 {
-    System.out.println("nice name, " + userName + ", now type your favorite season(summer, winter, fall, spring).");
+    System.out.println("nice name, " + userName + ", now type your favorite season to find your animal(summer, winter, fall, spring).");
 }
     else 
 {
@@ -36,14 +40,17 @@ String userName = input.nextLine().toLowerCase();
 String userSeason = input.nextLine().toLowerCase();
     if (userSeason.equals("summer") || userSeason.equals("winter") || userSeason.equals("fall") || userSeason.equals("spring"))
  {
-    System.out.println("awesome season, " + userSeason + ".");
+    System.out.println("code goes HERE");
  }
     else 
     {
         System.out.println("please type a valid season, (summer, winter, fall, or spring).");
         return; //exit program
     }
-    }
+
+
+
+}
 }           
 
 
