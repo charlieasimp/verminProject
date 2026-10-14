@@ -47,7 +47,6 @@ public class Pet {
 
 
      public static void getAnAnimal(String userColor, String userSeason, String userName){
-
       if (userColor.equals("blue") && userSeason.equals("fall"))
       {
         System.out.println("Your pet is an alligator!");
@@ -56,13 +55,25 @@ public class Pet {
       {
         System.out.println("Your pet is an ostrich!");
       }
-      else if (userColor.equals("aieou".indexOf(userName.substring(0,1)) < 0 && userColor.equals("green") && userSeason.equals("winter")
+      else if (userColor.equals("blue") && "aieou".indexOf(userName.substring(0,1))>0 && (userSeason.equals("winter")) || (userSeason.equals("spring")))
       {
+        System.out.println("Your pet is an axolotl!");
+      }
+      else if ("aieou".indexOf(userName.substring(0,1))< 0 && userColor.equals("green") && userSeason.equals("winter"))
+      {       
         System.out.println("Your pet is a giraffe!");
       }
       else if (userColor.equals("green") && !userSeason.equals("fall"))
       {
         System.out.println("Your pet is a dog!");
+      }
+      else if (userColor.equals("red"))
+      {
+        System.out.println("Your pet is a panda!");
+      }
+      else if (userColor.equals("red") && "aieou".indexOf(userName.substring(0,1))>0)
+      {
+        System.out.println("Your pet is a porcupine!");
       }
       
 }
