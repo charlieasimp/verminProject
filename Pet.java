@@ -27,7 +27,7 @@ public class Pet {
         }
 
         String userName = input.nextLine().toLowerCase();
-        if ("abcdefghijklmnopqrstuvwxyz".indexOf(userName.substring(0, 1)) > 0) {
+        if ("abcdefghijklmnopqrstuvwxyz".indexOf(userName.substring(0, 1)) > -1) {
             System.out.println("nice name, " + userName
                     + ", now type your favorite season to find your animal(summer, winter, fall, spring).");
         } else {
@@ -37,7 +37,7 @@ public class Pet {
         String userSeason = input.nextLine().toLowerCase();
         if (userSeason.equals("summer") || userSeason.equals("winter") || userSeason.equals("fall")
                 || userSeason.equals("spring")) {
-            getAnAnimal(userColor, userSeason);
+            getAnAnimal(userColor, userSeason, userName);
         } else {
             System.out.println("please type a valid season, (summer, winter, fall, or spring).");
             return; // exit program
@@ -46,7 +46,7 @@ public class Pet {
     }
 
 
-     public static void getAnAnimal(String userColor, String userSeason){
+     public static void getAnAnimal(String userColor, String userSeason, String userName){
 
       if (userColor.equals("blue") && userSeason.equals("fall"))
       {
@@ -55,6 +55,10 @@ public class Pet {
       else if (userColor.equals("blue") && userSeason.equals("spring"))
       {
         System.out.println("Your pet is an ostrich!");
+      }
+      else if (userColor.equals("aieou".indexOf(userName.substring(0,1)) < 0 && userColor.equals("green") && userSeason.equals("winter")
+      {
+        System.out.println("Your pet is a giraffe!");
       }
       else if (userColor.equals("green") && !userSeason.equals("fall"))
       {
