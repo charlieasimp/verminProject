@@ -58,7 +58,7 @@ public class Pet {
       {       
         System.out.println("Your pet is a giraffe!");
       }
-      else if (userColor.equals("blue") && "aieou".indexOf(userName.substring(0,1))>0 && (userSeason.equals("winter")) || (userSeason.equals("spring")))
+      else if (userColor.equals("blue") && "aieou".indexOf(userName.substring(0,1))<0 && (userSeason.equals("winter")) || (userSeason.equals("spring")))
       {
         System.out.println("Your pet is an axolotl!");
       }
