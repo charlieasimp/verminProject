@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 //this program will output a perfect pet for the user
 //according to their favorite color, season, or depending
-//on the contents/letters in their name
+//on their name if it starts with a vowel or not
 public class Pet {
 
     public static void main(String[] args) {
@@ -18,12 +18,7 @@ public class Pet {
             System.out.println("cool color, " + userColor + ", now type your name.");
         } else {
             System.out.println("please type a valid color. (red, blue, or green).");
-            userColor = input.nextLine().toLowerCase();
-            if (userColor.equals("blue") || userColor.equals("green") || userColor.equals("red"))
-                ;
-            {
-                System.out.println("cool color, " + userColor + ", now type your name.");
-            }
+            return;
         }
 
         String userName = input.nextLine().toLowerCase();
@@ -55,27 +50,35 @@ public class Pet {
       {
         System.out.println("Your pet is an ostrich!");
       }
-      else if (userColor.equals("blue") && "aieou".indexOf(userName.substring(0,1))>0 && (userSeason.equals("winter")) || (userSeason.equals("spring")))
+      else if (userColor.equals("green") && !userSeason.equals("fall"))
       {
-        System.out.println("Your pet is an axolotl!");
+        System.out.println("Your pet is a dog!");
       }
       else if ("aieou".indexOf(userName.substring(0,1))< 0 && userColor.equals("green") && userSeason.equals("winter"))
       {       
         System.out.println("Your pet is a giraffe!");
       }
-      else if (userColor.equals("green") && !userSeason.equals("fall"))
+      else if (userColor.equals("blue") && "aieou".indexOf(userName.substring(0,1))>0 && (userSeason.equals("winter")) || (userSeason.equals("spring")))
       {
-        System.out.println("Your pet is a dog!");
-      }
-      else if (userColor.equals("red"))
-      {
-        System.out.println("Your pet is a panda!");
+        System.out.println("Your pet is an axolotl!");
       }
       else if (userColor.equals("red") && "aieou".indexOf(userName.substring(0,1))>0)
       {
         System.out.println("Your pet is a porcupine!");
       }
-      
+      else if (userColor.equals("red"))
+      {
+        System.out.println("Your pet is a panda!");
+      }
+      else if (userSeason.equals("summer"))
+      {
+        System.out.println("Your pet is a pony!");
+      }
+      else
+      {
+        System.out.println("Your pet is a pet rock...?");
+      }
+
 }
 
 
